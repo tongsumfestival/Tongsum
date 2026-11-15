@@ -40,6 +40,8 @@ a {
 
 
 /* NAVIGATION */
+
+/* NAVIGATION */
 .header {
     background: var(--dark-green);
     position: sticky;
@@ -69,14 +71,23 @@ a {
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 32px;
     list-style: none;
 }
 
-.nav-links a {
+.nav-links > li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links > li > a {
+    display: flex;
+    align-items: center;
     color: white;
     font-size: 14px;
     font-weight: 400;
+    line-height: 1;
     transition: 0.3s;
 }
 
@@ -97,30 +108,42 @@ a {
 /* ABOUT BUTTON AND DROPDOWN */
 .dropdown {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .about-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
 }
 
 .about-nav > a {
+    display: flex;
+    align-items: center;
     color: white;
     font-size: 14px;
     font-weight: 400;
+    line-height: 1;
 }
 
 .about-nav details {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .about-nav details summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     list-style: none;
     color: white;
     font-size: 14px;
     font-weight: 400;
+    line-height: 1;
     transition: 0.3s;
 }
 
