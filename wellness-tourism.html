@@ -1,0 +1,703 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore Darap Wellness Tourism, a 4-day journey through nature, wellness and Limboo culture in Sikkim.">
+
+    <title>Darap Wellness Tourism | Sikkim</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* WELLNESS PAGE */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .wellness-hero {
+            min-height: 500px;
+            background:
+                linear-gradient(rgba(0, 35, 25, 0.55),
+                rgba(0, 35, 25, 0.65)),
+                url("images/darap-wellness.jpg");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .wellness-hero .hero-content {
+            width: 100%;
+            padding: 70px 20px;
+        }
+
+        .wellness-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 7vw, 75px);
+            margin: 15px 0;
+        }
+
+        .wellness-hero h2 {
+            font-size: clamp(22px, 4vw, 32px);
+            font-weight: 500;
+        }
+
+        .wellness-hero p {
+            max-width: 650px;
+            margin: 15px auto 25px;
+            line-height: 1.8;
+        }
+
+        .wellness-intro {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .wellness-intro img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .wellness-intro h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 27px;
+            color: #174b38;
+        }
+
+        .wellness-intro p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* ITINERARY */
+
+        .itinerary-section {
+            background: #f5f5ef;
+            padding: 70px 0;
+        }
+
+        .day-card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #174b38;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .day-number {
+            display: inline-block;
+            background: #174b38;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .day-card h3 {
+            color: #174b38;
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            margin: 5px 0 15px;
+        }
+
+        .day-card p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        /* PACKAGE HIGHLIGHTS */
+
+        .wellness-highlights {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .highlight-card {
+            background: #f5f5ef;
+            padding: 25px 18px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .highlight-card .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .highlight-card h3 {
+            color: #174b38;
+        }
+
+        .highlight-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* BOOKING */
+
+        .booking-section {
+            background: #123d2d;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .booking-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+        }
+
+        .booking-section p {
+            line-height: 1.8;
+        }
+
+        .booking-section a {
+            color: #e5c36b;
+        }
+
+        /* WHATSAPP FLOATING LOGO */
+
+        .whatsapp-float {
+            position: fixed;
+            width: 58px;
+            height: 58px;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.12);
+        }
+
+        .whatsapp-float img {
+            width: 34px;
+            height: 34px;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 768px) {
+
+            .wellness-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .wellness-intro img {
+                height: 280px;
+            }
+
+            .wellness-highlights {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .day-card {
+                padding: 22px;
+            }
+
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                bottom: 18px;
+                right: 18px;
+            }
+
+        }
+
+        @media (max-width: 450px) {
+
+            .wellness-highlights {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header class="header">
+
+    <nav class="navbar container">
+
+        <a href="index.html" class="logo">
+            DARAP<span>.</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">HOME</a></li>
+
+            <li><a href="#about">ABOUT</a></li>
+
+            <li><a href="#itinerary">ITINERARY</a></li>
+
+            <li><a href="#experience">EXPERIENCE</a></li>
+
+            <li><a href="#booking">CONTACT</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="wellness-hero">
+
+    <div class="hero-content container">
+
+        <p class="eyebrow">
+            DISCOVER THE BEAUTY OF SIKKIM
+        </p>
+
+        <h1>DARAP</h1>
+
+        <h2>Wellness Tourism Package</h2>
+
+        <p>
+            A 4-day journey through nature, wellness
+            and Sikkimese culture.
+        </p>
+
+        <a href="#about" class="btn">
+             Wellness Package ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+
+<section class="section container" id="about">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">WELCOME TO DARAP</p>
+
+        <h2>Darap Wellness Tourism</h2>
+
+        <span class="heading-line"></span>
+
+    </div>
+
+    <div class="wellness-intro">
+
+        <div>
+
+            <img src="images/darap-wellness.jpg"
+                 alt="Beautiful Darap village in Sikkim">
+
+        </div>
+
+        <div>
+
+            <h3>A Journey to Slow Down and Reconnect</h3>
+
+            <p>
+                Darap Wellness Tourism is a soulful journey
+                into the serene landscapes and living traditions
+                of Sikkim. Set in the peaceful village of Darap,
+                this experience brings together mindful wellness,
+                nature, local food and authentic community life.
+            </p>
+
+            <p>
+                From gentle walks and natural water sound therapy
+                to herbal gardens, farm-to-table meals and Limboo
+                cultural experiences, every moment invites you
+                to slow down, reconnect and experience Sikkim
+                with heart.
+            </p>
+
+            <p>
+                Discover the simple beauty of village life,
+                connect with the local community and enjoy
+                a refreshing break surrounded by nature.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOUR DAY ITINERARY -->
+
+<section class="itinerary-section" id="itinerary">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">YOUR WELLNESS JOURNEY</p>
+
+            <h2>4-Day Tour Itinerary</h2>
+
+            <span class="heading-line"></span>
+
+            <p>
+                Every day offers a new opportunity to enjoy
+                nature, wellness and local culture.
+            </p>
+
+        </div>
+
+
+        <!-- DAY 1 -->
+
+        <div class="day-card">
+
+            <span class="day-number">DAY 01</span>
+
+            <h3>Bagdogra to Darap</h3>
+
+            <p>
+                Your journey begins with your arrival at
+                Bagdogra Airport, followed by a scenic transfer
+                to Darap, a peaceful village in West Sikkim.
+            </p>
+
+            <p>
+                On reaching the village, settle into your
+                homestay, meet your local hosts and take some
+                time to relax. Enjoy the beautiful surroundings
+                and get ready for the experiences ahead.
+            </p>
+
+        </div>
+
+
+        <!-- DAY 2 -->
+
+        <div class="day-card">
+
+            <span class="day-number">DAY 02</span>
+
+            <h3>Darap Village, Nature and Culture</h3>
+
+            <p>
+                Begin your morning with a gentle walk through
+                Darap village. Enjoy birdwatching, fresh mountain
+                air and the soothing sounds of flowing water.
+            </p>
+
+            <p>
+                After breakfast, explore the village and its
+                herbal gardens. Learn about local plants and
+                traditional knowledge while enjoying the natural
+                surroundings.
+            </p>
+
+            <p>
+                For lunch, take part in a farm-to-table experience.
+                Visit a local farm, prepare fresh vegetables and
+                enjoy authentic Sikkimese food.
+            </p>
+
+            <p>
+                Spend the evening discovering Limboo traditions
+                through folk stories and traditional music.
+                Return to your Darap homestay for an overnight stay.
+            </p>
+
+        </div>
+
+
+        <!-- DAY 3 -->
+
+        <div class="day-card">
+
+            <span class="day-number">DAY 03</span>
+
+            <h3>Darap to Rani Dhunga Hike</h3>
+
+            <p>
+                Start your morning with a peaceful village walk
+                and the soothing sounds of nature. Before breakfast
+                at around 7:30 AM, enjoy a yoga, meditation or
+                quiet reflection session, followed by a traditional
+                herbal bath, depending on weather and availability.
+            </p>
+
+            <p>
+                After breakfast, set out on a hike from Darap
+                to Rani Dhunga. Enjoy the forest trails, fresh
+                mountain air and beautiful natural surroundings.
+            </p>
+
+            <p>
+                Return to the village for a farm visit and a
+                freshly prepared Sikkimese lunch.
+            </p>
+
+            <p>
+                Spend the afternoon exploring the village and
+                herbal gardens. In the evening, enjoy Limboo
+                folk stories, traditional music and cultural
+                performances, followed by dinner and an
+                overnight stay at your homestay.
+            </p>
+
+        </div>
+
+
+        <!-- DAY 4 -->
+
+        <div class="day-card">
+
+            <span class="day-number">DAY 04</span>
+
+            <h3>Darap to Bagdogra</h3>
+
+            <p>
+                Enjoy your final morning in Darap with a
+                delicious breakfast and the peaceful beauty
+                of the village.
+            </p>
+
+            <p>
+                After breakfast, say goodbye to your hosts
+                and begin your return journey to Bagdogra,
+                carrying home beautiful memories of nature,
+                culture and wellness.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WELLNESS EXPERIENCE -->
+
+<section class="section container" id="experience">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">DISCOVER WHAT AWAITS YOU</p>
+
+        <h2>Wellness Experiences</h2>
+
+        <span class="heading-line"></span>
+
+    </div>
+
+    <div class="wellness-highlights">
+
+        <div class="highlight-card">
+
+            <div class="icon">🌿</div>
+
+            <h3>Nature Walks</h3>
+
+            <p>
+                Enjoy peaceful walks and discover
+                the natural beauty of Darap.
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <div class="icon">💧</div>
+
+            <h3>Water Sound Therapy</h3>
+
+            <p>
+                Take time to relax and enjoy the
+                soothing sounds of flowing water.
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <div class="icon">🌱</div>
+
+            <h3>Herbal Gardens</h3>
+
+            <p>
+                Explore local plants and learn
+                about traditional herbal knowledge.
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <div class="icon">🍲</div>
+
+            <h3>Local Food</h3>
+
+            <p>
+                Enjoy fresh farm-to-table meals
+                and traditional Sikkimese cuisine.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BOOKING SECTION -->
+
+<section class="booking-section" id="booking">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            PLAN YOUR WELLNESS JOURNEY
+        </p>
+
+        <h2>Experience Darap with Heart</h2>
+
+        <p>
+            For package information and booking enquiries,
+            please contact Darap Tourism Development
+            Committee (DTDC).
+        </p>
+
+        <p>
+            <strong>Booking through DTDC only.</strong>
+        </p>
+
+        <p>
+            Visit our website for more details:
+        </p>
+
+        <a href="https://tongsumfestival.github.io/Tongsum/"
+           target="_blank">
+            Tongsum Festival Website
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div>
+
+            <a href="index.html" class="footer-logo">
+                DARAP<span>.</span>
+            </a>
+
+            <p>
+                Discover nature, wellness and
+                the living traditions of Sikkim.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#itinerary">Itinerary</a>
+
+            <a href="#experience">Experiences</a>
+
+            <a href="#booking">Contact</a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        <p>
+            © <span id="year"></span>
+            Darap Wellness Tourism.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP LOGO -->
+
+<a href="https://wa.me/917876120147"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact DTDC on WhatsApp">
+
+    <img
+        src="https://cdn.simpleicons.org/whatsapp/FFFFFF"
+        alt="WhatsApp">
+
+</a>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
